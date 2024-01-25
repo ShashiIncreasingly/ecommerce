@@ -15,7 +15,7 @@ const ShoppingCart = () => {
          {showCart && <div className='absolute bg-gray-100 h-full shadow-lg border w-80 p-2 top-0 right-0 minicartopen'>
             {document.body.classList.add('open')}
             <div className="flex gap-2">
-               <button className='focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-2 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 close_btn' onClick={() => setShowCart(false)} > Close</button>
+               <button className='focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-2 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 close_btn' onClick={() => setShowCart(false)} > </button>
                <button className='focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-2 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 clear_cart' onClick={() => clearCart()}>Clear Cart</button>
             </div >
 
@@ -23,8 +23,8 @@ const ShoppingCart = () => {
                {cart.map(item => (
                   <li key={item.id} className='flex items-center justify-between product_list_cart'>
                      <div className='cart_image_block'><img src={item.imageURLN} alt={item.product_name} /></div>
-                     <div className='product_cart_price_title'><p className='product_name_cart'>{item.product_name} </p> 
-                     <div className='cart_price_bk'><Price price={item.price} discounted_price={item.discounted_price} /> </div></div>
+                     <div className='product_cart_price_title'><p className='product_name_cart'>{item.product_name} </p> <p className='qty'>Quantity : {item.qty_val} </p>
+                     <div className='cart_price_bk'>Price: <Price price={item.price} discounted_price={item.discounted_price} /> </div></div>
                      <button onClick={() => removeItemFromCart(item.id)} className='product_btn_cart'></button>
                   </li>
                ))}

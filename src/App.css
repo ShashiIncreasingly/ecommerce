@@ -254,7 +254,9 @@ button {
   padding: 5px;
 }
 .clear_cart{
-  color:#000;
+  padding: 3px;
+  background: red;
+  color: white;
 }
 
 .cart_image_block img {
@@ -317,6 +319,12 @@ button {
   justify-content: center;
   margin-top: 20px;
   align-items: center;
+  position: sticky;
+  top: auto;
+  bottom: 10px;
+  background: #f1f1f1;
+  padding: 10px;
+  min-height: 60px;
 }
 .minicartopen .subTotalBlock span {
   font-size: 18px;
@@ -418,4 +426,39 @@ body.open {
     min-width: 28%;
     padding-left: 10px;
   }
+}
+@media only screen and (min-width: 1300px) {
+  .filter_block {
+    margin-left: 5px;
+  }
+}
+.product_cart_price_title p {
+  margin: 2px 0px;
+}
+.close_btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  background: none;
+  border: none;
+}
+.close_btn:hover {
+  opacity: 1;
+}
+.close_btn:before, .close_btn:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close_btn:before {
+  transform: rotate(45deg);
+}
+.close_btn:after {
+  transform: rotate(-45deg);
 }

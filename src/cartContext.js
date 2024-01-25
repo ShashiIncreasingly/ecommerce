@@ -5,9 +5,23 @@ const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-
   const addItemToCart = (item) => {
-    setCart([...cart, item]);
+    let checkProducts=false;
+    for(let i=0; i<cart.length; i++){
+      if(cart[i].id === item.id){
+        checkProducts = true
+        if(cart[i].qty_val === undefined){
+          cart[i].qty_val = 2
+        }else{
+          cart[i].qty_val = parseInt(cart[i].qty_val) + 1
+        }
+        break;
+      }
+    }
+    if(!checkProducts){
+      item.qty_val = 1
+      setCart([...cart, item]);
+    }
   };
 
   const removeItemFromCart = (itemId) => {
