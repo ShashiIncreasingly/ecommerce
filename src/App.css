@@ -172,7 +172,7 @@ button {
   margin-bottom: 10px;
 }
 .minicartopen{
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   border-width: 1px;
@@ -185,15 +185,11 @@ button {
   box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
   height: 100%;
   padding: 12px;
-  width: 30%;
   overflow: hidden;
   overflow-y: auto;
   transition: all ease 2s;
-  transition: all ease 2s;
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 30%;
+  width: 400px;
   height: 100%;
   opacity: 0;
   z-index: -1;
@@ -387,7 +383,7 @@ body.open {
   background-color: #000;
   background-color: currentColor;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .product_btn_cart:after {
@@ -402,7 +398,7 @@ body.open {
 }
 
 /* @media (min-width:320px)  {  */
-@media only screen and (min-width: 320px) and (max-width: 961px) { 
+@media only screen and (min-width: 300px) and (max-width: 961px) { 
   .product_wraper {
     flex-flow: column;
   }
@@ -433,6 +429,9 @@ body.open {
 @media only screen and (min-width: 481px) and (max-width: 959px) { 
   .product_list {
     min-width: 242px;
+  }
+  .minicartopen {
+    width: 400px;
   }
 }
 @media only screen and (min-width: 960px) and (max-width: 1200px) { 
