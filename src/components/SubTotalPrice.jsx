@@ -10,8 +10,8 @@ const SubTotal = () => {
         let totalPrice=0
         let totalDiscountPrice=0
         cart.map((product) => {
-            totalDiscountPrice += product.discounted_price ?  product.discounted_price :  product.price
-            totalPrice += product.price
+            totalDiscountPrice += product.discounted_price ?  product.discounted_price * product.qty_val :  product.price * product.qty_val
+            totalPrice += product.price * product.qty_val
         })
         setSubTotal(totalPrice)
         setSubTotalDiscount(totalDiscountPrice)

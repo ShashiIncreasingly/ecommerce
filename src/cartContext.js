@@ -21,7 +21,10 @@ export const CartProvider = ({ children }) => {
     if(!checkProducts){
       item.qty_val = 1
       setCart([...cart, item]);
+    }else{
+      setCart([...cart]);
     }
+    document.querySelector('.cart_header').click();
   };
 
   const removeItemFromCart = (itemId) => {

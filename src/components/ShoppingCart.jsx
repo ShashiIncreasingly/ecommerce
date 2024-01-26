@@ -6,13 +6,14 @@ import SubTotal from './SubTotalPrice';
 const ShoppingCart = () => {
    const { cart, addItemToCart, removeItemFromCart, clearCart } = useCart();
    const [showCart, setShowCart] = useState(false)
+   
    return (
       
       <div className='cart_header_b'>
          {document.body.classList.remove('open')}
          <div className='flex items-center gap-2 cart_header' onClick={() => setShowCart(true)}><div className='carticon'><p>Cart</p><p className='font-light cart_count'>{cart.length}</p></div><SubTotal/></div>
          {showCart && <div onClick={() => setShowCart(false)} className='overlay'></div>}
-         {showCart && <div className='absolute bg-gray-100 h-full shadow-lg border w-80 p-2 top-0 right-0 minicartopen'>
+         {showCart && <div className='absolute bg-gray-100 h-full shadow-lg border w-80 p-2 top-0 right-0 minicartopen modalopen'>
             {document.body.classList.add('open')}
             <div className="flex gap-2">
                <button className='focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-2 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 close_btn' onClick={() => setShowCart(false)} > </button>
