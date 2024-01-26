@@ -74,10 +74,11 @@
 }
 .filter_wrap{
   display: flex;
-  width: 18%;
+  width: 268px;
   min-width: 18%;
-  flex-flow: column;
   background: #efefef;
+  justify-content: center;
+  margin-top: 0;
 }
 .product_wraper{
   display: flex;
@@ -126,40 +127,42 @@
   display: flex;
   font-weight: bold;
   font-size: 24px;
-  align-items: center;
-  margin-right: 10px;
+  justify-content: center;
 }
 .filter_wrap button {
   display: flex;
   background-color: #eee;
   color: #000;
-  width: 150px;
-  padding: 8px;
-  border-radius: 4px;
+  width: 241px;
+  padding: 4px;
+  border-radius: 20px;
   justify-content: center;
   font-weight: bold;
   font-size: 18px;
   cursor: pointer;
+  margin: 10px 0;
 }
+
 button {
   cursor: pointer;
 }
 .filterbrand, .filtercategory {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
 }
 .filtercategory label, .filterbrand label{
   display: flex;
   flex-flow: row;
-  margin-right: 10px;
-  align-items: center;
+  margin: 2px 0;
+  justify-content: center;
   font-weight: bold;
 }
 
 .filtercategory select, .filterbrand select{
   display: flex;
   flex-flow: row;
-  padding: 10px;
+  padding: 5px;
+  border-radius: 20px;
 }
 
 .filtercategory {
@@ -169,7 +172,7 @@ button {
   display: flex;
   justify-content: flex-start;
   margin-top: 10px;
-  margin-bottom: 10px;
+  flex-flow: column;
 }
 .minicartopen{
   position: absolute;
