@@ -1,3 +1,6 @@
+*{
+  font-family:'Helvetica, Arial, sans-serif';
+}
 .App {
   text-align: center;
   display: flex;
@@ -52,7 +55,7 @@
   max-width: 200px;
   margin: 10px 10px;
   border: 1px solid #ccc;
-  min-width: 262px;
+  min-width: 260px;
 }
 .product_list img {
   max-width: 200px;
@@ -479,3 +482,61 @@ body.open {
 .close_btn:after {
   transform: rotate(-45deg);
 }
+main {
+  display: flex;
+  flex-flow: column;
+}
+.header_2 a {
+  display: flex;
+  flex-flow: column;
+}
+
+.header_1, .header_2, .header_3, .header_4, .header_5{
+  display: flex;
+  flex-flow: column;
+  background-color: #86c7ff;
+}
+
+.header_1 p, .header_2 p, .header_3 p, .header_4 p, .header_5 p {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header_1 img, .header_2 img, .header_3 img, .header_4 img, .header_5 img {
+  min-width: 80%;
+  max-width: 80%;
+  margin: auto;
+}
+.header_1 h1{
+  display: flex;
+  justify-content: center;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-right: 90px solid #72bcf4;
+  border-bottom: 40px solid transparent;
+}
+.triangle-left span {
+  font-size: 23px;
+  font-weight: bold;
+  position: relative;
+  left: 25px;
+  font-family: cursive;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+menu, ol, ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
