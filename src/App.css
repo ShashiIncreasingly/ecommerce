@@ -211,11 +211,13 @@ button {
 .flex {
   display: flex;
 }
-@media (prefers-color-scheme: dark)
-.dark\:bg-red-600 {
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-red-600 {
     --tw-bg-opacity: 1;
     background-color: rgb(220 38 38/var(--tw-bg-opacity));
+  }
 }
+
 .text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity));
@@ -245,11 +247,13 @@ button {
 .me-2 {
     margin-inline-end: 0.5rem;
 }
-@media (prefers-color-scheme: dark)
-.dark\:bg-green-600 {
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-green-600 {
     --tw-bg-opacity: 1;
     background-color: rgb(22 163 74/var(--tw-bg-opacity));
+  }
 }
+
 .justify-between {
   justify-content: space-between;
 }
