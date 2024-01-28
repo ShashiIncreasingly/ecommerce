@@ -36,7 +36,7 @@ function Filter({ products, filterByBrands, filterByCategories,resetFilter }) {
          <div className='p-5 flex space-y-3 flex flex-col filter_block'>
             <div className='flex flex-col resetfilter'>
                <div className='filterText'><span>Quick Filter Option </span></div>
-               <button onClick={() => resetFilter()} href="#_" class="inline-flex items-center justify-center px-2 py-2 text-sm  leading-6 text-white whitespace-no-wrap bg-blue-600 border border-blue-700 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" data-rounded="rounded-md" data-primary="blue-600" data-primary-reset="{}">
+               <button onClick={() => resetFilter()} href="#_" className="inline-flex items-center justify-center px-2 py-2 text-sm  leading-6 text-white whitespace-no-wrap bg-blue-600 border border-blue-700 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" data-rounded="rounded-md" data-primary="blue-600" data-primary-reset="{}">
                   Reset Filter
                </button>
             </div>
