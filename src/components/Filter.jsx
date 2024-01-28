@@ -52,7 +52,7 @@ function Filter({ products, filterByBrands, filterByCategories,resetFilter }) {
                <label className='text-sm text-gray-700 mb-1'>Filter By Category </label>
                <select className='rounded px-2 py-1 text-sm' onChange={(e) => filterByCategories(e.target.value)}>
                   {activeFilterProduct.map((product) => {
-                     return (<option>{product.category}</option>)
+                     return (<option key={product.id}>{product.category}</option>)
                   })}
                </select>
             </div>
